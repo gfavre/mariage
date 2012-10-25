@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+{% load cms_tags menu_tags i18n %}
+
+{% block base_content %}
+    <div class="main-container">        
+      <div class="main wrapper clearfix">
+        <p class="welcome">{% trans "Nous nous réjouissons de tous vous retrouver pour ce jour spécial! "%}</p>
+        <nav id="main-navigation">
+          <ul>
+            {% show_menu 0 %}
+          </ul>
+        </nav>
+
+        <article>
+          {% placeholder main_content %}
+           {{ get_current_language }}
+        </article>
+        
+        <aside>
+          <nav class="secondary">
+            <ul>
+              {% show_menu 1 %}
+            </ul>
+          </nav>
+          {% placeholder main_content %}
+       </aside>
+
+     </div> <!-- #main -->
+   </div> <!-- #main-container -->
+
+
+
+  
+{% endblock %}

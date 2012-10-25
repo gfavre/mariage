@@ -1,0 +1,6 @@
+*.pyc
+files
+*.egg
+build
+site
+mariage.egg-info
