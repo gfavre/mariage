@@ -142,6 +142,7 @@ INSTALLED_APPS = (
     'cmsplugin_photologue',
     
     'mariage.slideshow',
+    'mariage',
     
     
 )

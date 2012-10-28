@@ -4,3 +4,4 @@ files
 build
 site
 mariage.egg-info
+.DS_Store
