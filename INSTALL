@@ -1,0 +1,27 @@
+Requirements:
+- Python > 2.6.0
+    + virtualenv (easy_install virtualenv)
+    + fabric (easy_install fabric
+- Mercurial (easy_install mercurial)
+- Git
+
+OSX:
+Prior to installing software, you shoukd install some software for PIL
+PIL won't work with jpeg files by default. 
+
+cd /tmp
+curl -O http://www.ijg.org/files/jpegsrc.v8c.tar.gz
+tar -xvzf jpegsrc.v8c.tar.gz
+cd jpeg-8c
+./configure
+make
+sudo make install
+cd ..
+curl -O http://ftp.igh.cnrs.fr/pub/nongnu/freetype/freetype-2.4.5.tar.gz
+tar -xvzf freetype-2.4.5.tar.gz
+cd freetype-2.4.5
+./configure
+make
+sudo make install
+
+
