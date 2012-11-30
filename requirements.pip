@@ -14,6 +14,5 @@ django-photologue==2.4
 django-extensions==0.9
 django-admin-tools==0.4.1
 django-grappelli==2.4.0
-django-fab-deploy
-jinja2
 fabric>=1.4
+git+git://github.com/encinas/cmsplugin-photologue

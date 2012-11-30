@@ -1,12 +1,12 @@
 # -*- coding: utf-8 -*-
 
-import os
-from django.utils import importlib
+HOSTMAP = {
+    'development': ['GFiMac27.local', 'kismac2.epfl.ch'],
+    'production':['web224.webfaction.com',],
+    }
 
-ENVMAP = {
-    'production':['mariage-production',],
-    'development':['mariage']
-}
+import socket, re
+from django.utils import importlib
 
 def update_current_settings(file_name):
     """
@@ -18,20 +18,18 @@ def update_current_settings(file_name):
         if k.upper() == k:
             globals().update({k:v})
 
-
-if 'ENV_TO_USE' in os.environ:
-    current_env = os.environ['ENV_TO_USE']
-else:
-    current_env = os.path.split(os.environ.get('VIRTUAL_ENV', 'mariage'))[1]
-
+current_hostname = socket.gethostname()
 to_load = []
-for k, v in ENVMAP.items():
-    if current_env in v:
-        to_load.append(k)
+
+for k, v in HOSTMAP.items():
+    for pattern in v:
+        if re.match(pattern, current_hostname):
+            to_load.append(k)
 
 update_current_settings('mariage.settings.common')
 for x in to_load:
     try:
         update_current_settings('mariage.settings.%s' % x)
-    except ImportError:
+    except ImportError, msg:
         print "Error importing %s" % x
+        print msg

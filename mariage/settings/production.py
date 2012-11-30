@@ -2,7 +2,7 @@
 import os
 from common import *
 
-ADMINS = (('Gregory Favre', 'gregory.favre@epfl.ch'),)
+ADMINS = (('Gregory Favre', 'gregory.favre@gmail.com'),)
 
 
 DEBUG = False
@@ -10,9 +10,12 @@ TEMPLATE_DEBUG = DEBUG
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'OPTIONS': { 'read_default_file': '/data/www/cosadoca-production/private/my.cnf'
-        },
+        'ENGINE': 'postgresql_psycopg2',
+        'NAME': 'grfavre_mariage',
+        'USER': 'grfavre_mariage',
+        'PASSWORD': '7f57a608',
+        'HOST': '',
+        'PORT': '',
     }
 }
 
@@ -21,14 +24,6 @@ DATABASES = {
 
 STATIC_URL = '/static/' # static files (css, js, etc.)
 MEDIA_URL = '/media/' # uploads
-STATIC_ROOT = '/data/www/cosadoca-production/htdocs/static'
-MEDIA_ROOT = '/data/www/cosadoca-production/htdocs/uploaded'
-STATICFILES_DIRS = (os.path.join(os.path.dirname(PROJECT_DIR), 'cosadoca', 'media'),)
-
-FILER_STORAGES['public']['main']['OPTIONS']['location'] = MEDIA_ROOT
-FILER_STORAGES['private']['main']['OPTIONS']['location'] = MEDIA_ROOT
-
-INTERNAL_IPS = ('127.0.0.1',)
-HAYSTACK_WHOOSH_PATH = os.path.join('/data/www/cosadoca-production/private/cosadoca_index')
-
-
+STATIC_ROOT = '/home/grfavre/webapps/mariage_static/'
+MEDIA_ROOT = '/home/grfavre/webapps/mariage_static/media/'
+STATICFILES_DIRS = '/home/grfavre/webapps/mariage/mariage/media'),)
