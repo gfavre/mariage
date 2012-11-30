@@ -26,4 +26,4 @@ STATIC_URL = '/static/' # static files (css, js, etc.)
 MEDIA_URL = '/media/' # uploads
 STATIC_ROOT = '/home/grfavre/webapps/mariage_static/'
 MEDIA_ROOT = '/home/grfavre/webapps/mariage_static/media/'
-STATICFILES_DIRS = '/home/grfavre/webapps/mariage/mariage/media'
+STATICFILES_DIRS = ('/home/grfavre/webapps/mariage/mariage/media',)
