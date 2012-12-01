@@ -144,6 +144,8 @@ INSTALLED_APPS = (
     'mariage.slideshow',
     'mariage',
     
+    'gunicorn',
+    
     
 )
 

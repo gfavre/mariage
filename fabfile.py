@@ -43,14 +43,14 @@ env.hosts             = [WF_HOST]
 env.user              = USER
 env.password          = PASSWORD
 env.dbpassword        = DBPASSWORD
-env.home              = "/home/%s" % USER
+env.home              = os.path.join("/home/", USER)
 env.project           = PROJECT_NAME
 env.repo              = REPOSITORY
-env.project_dir       = env.home + '/webapps/' + PROJECT_NAME
-env.settings_dir      = env.project_dir + SETTINGS_SUBDIR
-env.supervisor_dir    = env.home + '/webapps/supervisor'
+env.project_dir       = os.path.join(env.home, 'webapps', PROJECT_NAME)
+env.settings_dir      = os.path.join(env.project_dir, SETTINGS_SUBDIR)
+env.supervisor_dir    = os.path.join(env.home, 'webapps', 'supervisor')
 env.virtualenv_dir    = VIRTUALENVS
-env.supervisor_ve_dir = env.virtualenv_dir + '/supervisor'
+env.supervisor_ve_dir = os.path.join(env.virtualenv_dir, '/supervisor')
 env.webfaction = WebFactionXmlRPC(USER, PASSWORD)
 
 
@@ -91,7 +91,7 @@ def _create_main_app():
         
     env.webfaction.create_app(env.project, 'custom_app_with_port', False, '')
     
-def _configure_supervisor():
+def configure_supervisor():
     print("Configuring supervisor...")
     upload_template('config_templates/gunicorn.conf',
                     '%s/conf.d/%s.conf' % (env.supervisor_dir, env.project),
