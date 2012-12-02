@@ -3,7 +3,7 @@
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
-{% load i18n cms_tags menu_tags sekizai_tags  %}
+{% load i18n cms_tags menu_tags sekizai_tags %}
 <html>
   <head>
     <meta charset="utf-8">
@@ -24,7 +24,7 @@
     <div class="header-container">
       <header class="wrapper clearfix">
         <h1 class="title">Noémie &amp; Greg</h1>
-        <h3 class="subtitle">10 août 2013 - Plus que 320 jours</h3>
+        <h3 class="subtitle">{% if not over %}{{ daysto }} jours avant notre mariage, le {% endif %}10 août 2013</h3>
         {% comment %}{% language_chooser "short"%}{% endcomment %}
       </header>
     </div>
