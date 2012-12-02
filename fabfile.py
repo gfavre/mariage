@@ -91,7 +91,7 @@ def _create_main_app():
         
     env.webfaction.create_app(env.project, 'custom_app_with_port', False, '')
     
-def configure_supervisor():
+def _configure_supervisor():
     print("Configuring supervisor...")
     upload_template('config_templates/gunicorn.conf',
                     '%s/conf.d/%s.conf' % (env.supervisor_dir, env.project),
@@ -112,6 +112,7 @@ def configure_webfaction():
 def install_app():
     "Installs the django project in its own wf app and virtualenv"
     print("Grabbing sources...")
+    configure_webfaction()
     with cd(env.home + '/webapps'):
         if not exists(env.project_dir + '/setup.py'):
             run('git clone %s %s' % (env.repo, env.project_dir))
@@ -136,7 +137,7 @@ def reload_app(arg=None):
             _ve_run(env.project, "pip install -e ./")
             djangoadmin('syncdb')
             djangoadmin('migrate')
-            djangoadmin('collectstatic')
+            djangoadmin('collectstatic --noinput')
     
     restart_app()
 

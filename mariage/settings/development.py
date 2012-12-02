@@ -35,3 +35,4 @@ MEDIA_ROOT = os.path.join(os.path.dirname(PROJECT_DIR), 'files', 'uploaded')
 #INSTALLED_APPS += ('debug_toolbar' ,)
 INTERNAL_IPS = ('127.0.0.1',)
 
+STATICFILES_DIRS = (os.path.join(PROJECT_DIR, 'media'),)
