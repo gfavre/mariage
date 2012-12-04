@@ -138,9 +138,9 @@ INSTALLED_APPS = (
     'photologue',
 
     'cms', 'mptt', 'menus', 'south', 'sekizai',
-    #'cms.plugins.googlemap', 
+    'cms.plugins.googlemap', 
     'cms.plugins.link', 'cms.plugins.text',
-    'cmsplugin_photologue',
+    'cmsplugin_photologue', 
     
     'mariage.slideshow',
     'mariage',
