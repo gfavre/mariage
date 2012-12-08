@@ -136,12 +136,12 @@ INSTALLED_APPS = (
     'django.contrib.sitemaps',
 
     'photologue',
-
+    
     'cms', 'mptt', 'menus', 'south', 'sekizai',
     'cms.plugins.googlemap', 
     'cms.plugins.link', 'cms.plugins.text',
-    'cmsplugin_photologue',
-    
+    'cmsplugin_photologue', 
+    #'djangocms_text_ckeditor',
     'cmsplugin_contact',
     
     'mariage.slideshow',
@@ -151,6 +151,7 @@ INSTALLED_APPS = (
     
     
 )
+CMS_REDIRECTS = True
 AKISMET_API_KEY = 'c53e7d254deb'
 DEFAULT_FROM_EMAIL = 'mariage@nonoetgreg.ch'
 
