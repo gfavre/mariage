@@ -140,7 +140,9 @@ INSTALLED_APPS = (
     'cms', 'mptt', 'menus', 'south', 'sekizai',
     'cms.plugins.googlemap', 
     'cms.plugins.link', 'cms.plugins.text',
-    'cmsplugin_photologue', 
+    'cmsplugin_photologue',
+    
+    'cmsplugin_contact',
     
     'mariage.slideshow',
     'mariage',
@@ -149,6 +151,8 @@ INSTALLED_APPS = (
     
     
 )
+AKISMET_API_KEY = 'c53e7d254deb'
+DEFAULT_FROM_EMAIL = 'mariage@nonoetgreg.ch'
 
 # A sample logging configuration. The only tangible logging
 # performed by this configuration is to send an email to
