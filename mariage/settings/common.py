@@ -143,6 +143,7 @@ INSTALLED_APPS = (
     'cmsplugin_photologue', 
     #'djangocms_text_ckeditor',
     'cmsplugin_contact',
+    'mariage.rsvp',
     
     'mariage.slideshow',
     'mariage',
