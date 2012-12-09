@@ -1,0 +1,56 @@
+{% load i18n cms_tags sekizai_tags %}
+
+{% addtoblock "css" %}
+    <link rel="stylesheet" href="{{ STATIC_URL }}skins/tn3e/vertical.css">
+{% endaddtoblock %}
+
+{% addtoblock "js" %}        
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>
+        <script src="{{ STATIC_URL }}js/jquery.tn3.min.js"></script>
+        <script>
+          $(document).ready(function(){
+            $('.gallery').tn3({
+              autoplay: true,
+              width: 700,
+              skinDir: "{{ STATIC_URL }}skins",
+              skin: ["tn3e", "vertical"],
+              /*active:["next", "prev", "thumbs", "image", "control-bar", "preloader", "timer", "play", "fullscreen"],*/
+            });
+          });
+        </script>
+{% endaddtoblock %}
+
+    <div class="gallery">
+      {% for photo in gallery.photos.all %}
+        <a href="{{ photo.get_display_url }}"><img src="{{ photo.get_thumbnail_url }}" /></a>
+      {% endfor %}
+    </div>
+    
+    
+    
+<!--    
+        <div class="tn3e-image">
+    	<div class="tn3e-control-bar tn3_v tn3_h tn3_o">
+	    <div class="tn3e-fullscreen"></div>
+	    <div class="tn3e-play"></div>
+	    <div class="tn3e-show-albums"></div>
+        </div>
+	<div class="tn3e-preloader"><img src="preload.gif"/></div>
+	<div class="tn3e-timer"></div>
+    </div>
+    <div class="tn3e-text tn3_rh">
+	<div class="tn3e-image-title"></div>
+	<div class="tn3e-image-description"></div>
+    </div>
+    <div class="tn3e-next"></div>
+    <div class="tn3e-prev"></div>
+    <div class="tn3e-thumbs"></div>
+    <div class="tn3e-albums">
+	<h4>Browse Albums</h4>
+	<div class="tn3e-inalbums">
+	    <div class="tn3e-album"></div>
+	</div>
+	<div class="tn3e-albums-next"></div>
+	<div class="tn3e-albums-prev"></div>
+	<div class="tn3e-albums-close"></div>
+	-->
