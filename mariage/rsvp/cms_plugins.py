@@ -15,8 +15,9 @@ class RSVPContactPlugin(ContactPlugin):
     # We're using the original cmsplugin_contact templates here which
     # works fine but requires that the original plugin is in INSTALLED_APPS.
     render_template = "rsvp/rsvp.html"
-    email_template = "cmsplugin_contact/email.txt"
-    
+    email_template = "rsvp/email.txt"
+    subject_template = "rsvp/subject.txt"
+
     fieldsets = (
         (None, {
                 'fields': ('site_email', 'name_label', 'presence_label',

@@ -1,0 +1,8 @@
+Viendra au mariage: {% if data.presence %}OUI{% else %}NON{% endif %}
+
+Nom(s):
+{{ data.name }}
+
+
+Commentaires:
+{{ data.content }}

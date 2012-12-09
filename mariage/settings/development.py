@@ -36,3 +36,6 @@ MEDIA_ROOT = os.path.join(os.path.dirname(PROJECT_DIR), 'files', 'uploaded')
 INTERNAL_IPS = ('127.0.0.1',)
 
 STATICFILES_DIRS = (os.path.join(PROJECT_DIR, 'media'),)
+
+
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
