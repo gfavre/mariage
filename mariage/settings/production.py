@@ -27,3 +27,11 @@ MEDIA_URL = '/media/' # uploads
 STATIC_ROOT = '/home/grfavre/webapps/mariage_static/'
 MEDIA_ROOT = '/home/grfavre/webapps/mariage_static/media/'
 STATICFILES_DIRS = ('/home/grfavre/webapps/mariage/mariage/media',)
+
+
+EMAIL_HOST = 'smtp.webfaction.com'
+EMAIL_HOST_USER = 'grfavre_mariage'
+EMAIL_HOST_PASSWORD = 'mariagedbp4ssw0rd'
+DEFAULT_FROM_EMAIL = 'mariage@nonoetgreg.ch'
+SERVER_EMAIL = 'mariage@nonoetgreg.ch'
+
