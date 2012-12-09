@@ -103,6 +103,7 @@ def _configure_supervisor():
                         'user': env.user,
                      }
                     )
+    reload_supervisor()
  
 def configure_webfaction():
     _create_db()
@@ -142,11 +143,18 @@ def reload_app(arg=None):
     restart_app()
 
 
-def restart_app():
-    "Restarts the app using supervisorctl"
+def reload_supervisor():
+    "Reload supervisor config"
     with cd(env.supervisor_dir):
         _ve_run('supervisor','supervisorctl reread && supervisorctl reload')
+
+def restart_app():
+    "Restarts the app using supervisorctl"
+    with cd(env.supervisor_dir):            
         _ve_run('supervisor','supervisorctl restart %s' % env.project)
+
+
+
 
 ### Helper functions
 
