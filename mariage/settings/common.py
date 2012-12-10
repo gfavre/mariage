@@ -140,11 +140,11 @@ INSTALLED_APPS = (
     'cms', 'mptt', 'menus', 'south', 'sekizai',
     'cms.plugins.googlemap', 
     'cms.plugins.link', 'cms.plugins.text',
-    'cmsplugin_photologue', 
+    #'cmsplugin_photologue', 
     #'djangocms_text_ckeditor',
     'cmsplugin_contact',
     'mariage.rsvp',
-    
+    'mariage.gallery',
     'mariage.slideshow',
     'mariage',
     
