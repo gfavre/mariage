@@ -23,7 +23,7 @@ DATABASES = {
 # Example: "/home/media/media.lawrence.com/"
 
 STATIC_URL = '/static/' # static files (css, js, etc.)
-MEDIA_URL = '/media/' # uploads
+MEDIA_URL = '/static/media/' # uploads
 STATIC_ROOT = '/home/grfavre/webapps/mariage_static/'
 MEDIA_ROOT = '/home/grfavre/webapps/mariage_static/media/'
 STATICFILES_DIRS = ('/home/grfavre/webapps/mariage/mariage/media',)
