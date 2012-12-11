@@ -2,6 +2,7 @@ from django.conf.urls.defaults import patterns, include, url
 from django.contrib import admin
 from django.conf import settings
 
+from photologue.models import Photo
 
 admin.autodiscover()
 
@@ -19,3 +20,7 @@ if settings.DEBUG:
         {'document_root': settings.MEDIA_ROOT, 'show_indexes': True}),
     url(r'', include('django.contrib.staticfiles.urls')),
 ) + urlpatterns
+
+
+#Monkeypatches
+Photo._meta.ordering = ['date_added']
