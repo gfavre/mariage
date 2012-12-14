@@ -69,13 +69,15 @@ h3.subtitle{
   background: #8c0444;
 }
 nav.secondary {}       
-nav.secondary a {
+nav.secondary a,
+nav.secondary > ul > li:before {
     color: #8c0444;
     font-size: 1em;
     line-height: 1.4em;
     text-shadow: 1px 1px 3px rgba(0,0,0,0.3); 
     text-decoration: none;
 }
+nav.secondary > ul > li:before { content: '>'; margin: 0 .5em 0 0;}
 
 footer{margin-top: -2em; height: 2em; clear: both; padding-top: 2.5em; font-size: .9em;}
 footer a {color: #8c0444;}
@@ -135,7 +137,7 @@ article {padding-left: 8px;}
     .navbar .nav > li > a {padding: 10px 24px 10px 20px;}
     .dropdown .caret {margin-left: 15px;}
     nav.secondary a { 
-        font-size: 1.1em; line-height: 1.6em;
+        font-size: 1.1em; line-height: 2em;
         text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
     }
 
