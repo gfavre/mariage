@@ -1,88 +1,146 @@
-/* ==========================================================================
-   HTML5 Boilerplate styles - h5bp.com (generated via initializr.com)
-   ========================================================================== */
+html{background: url(../img/bg.png) repeat;}
 
-html,
-button,
-input,
-select,
-textarea {
-    color: #222;
-}
+body {font: 400 16px/1.6 'Lora', Georgia, serif;}
+h1 {font-size: 1.8em;}
+h2 {font-size: 1.5em;}
+h3 {font-size: 1.1em;}
 
-body {
-    font-size: 1em;
-    line-height: 1.4;
-}
 
-::-moz-selection {
-    background: #b3d4fc;
-    text-shadow: none;
-}
 
-::selection {
-    background: #b3d4fc;
-    text-shadow: none;
-}
 
-hr {
-    display: block;
-    height: 1px;
-    border: 0;
-    border-top: 1px solid #ccc;
-    margin: 1em 0;
-    padding: 0;
-}
 
-img {
-    vertical-align: middle;
-}
-
-fieldset {
-    border: 0;
-    margin: 0;
-    padding: 0;
-}
-
-textarea {
-    resize: vertical;
-}
-
-.chromeframe {
-    margin: 0.2em 0;
-    background: #ccc;
-    color: #000;
-    padding: 0.2em 0;
-}
-
+/* =========================================================================
+   header
+*/
 h1.title {
-  margin: .1em 0 0 0;
-  font: 400 5em 'Great Vibes', Helvetica, sans-serif;
-  color: #46362b;
+  margin: 2px 0 0 0;
+  font: 400 2em 'Great Vibes', Helvetica, sans-serif;
   text-shadow: 2px 2px 4px rgba(0,0,0,0.3); 
 }
+h1.title a {color: #46362b;}
+h1.title a:hover {text-decoration: none; color: #000;}
+
 h3.subtitle{
-  font: 400 1.1em 'Lora', Georgia, serif;
+  font: 400 .8em 'Lora', Georgia, serif;
   text-shadow: 2px 2px 4px rgba(0,0,0,0.3); 
-  text-align: center;
-  width: 433px;
-  margin-top: .2em;
+  margin-top: .15em;
 }
 
-p.welcome {
-  margin: 14px 4px 0 0;
-  font: 400 48px/0.8 'Great Vibes', Helvetica, sans-serif;
-  color: #fff;
-  width: 500px;
-  float: right;
-  text-align: right;
-  text-shadow: 2px 2px 3px rgba(0,0,0,0.31); 
+.welcome {display: none; }
+
+.navbar-inner {
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+    border: none;
+    background-color: #8c0444;
+    background-image: -webkit-linear-gradient(top, #8c0444 0%,#7E043D 100%);
+    background-image: -moz-linear-gradient(top, #8c0444 0%,#7E043D 100%);
+    background-image: linear-gradient(top, #8c0444 0%,#7E043D 100%);
+}
+.navbar .nav > li > a {
+    color: #fff;  
+}
+.navbar .nav > li:hover > a { color:#fff;}
+.navbar .nav li.dropdown > .dropdown-toggle .caret,
+.navbar .nav li.dropdown:hover > .dropdown-toggle .caret,
+.navbar .nav li.dropdown.open > .dropdown-toggle .caret, 
+.navbar .nav li.dropdown.active > .dropdown-toggle .caret, 
+.navbar .nav li.dropdown.open.active > .dropdown-toggle .caret {
+  border-top-color: #fff; border-bottom-color: #fff;
+}
+.navbar .nav li:hover{background: #7E043D;}
+.navbar .nav li.dropdown.open > .dropdown-toggle, 
+.navbar .nav li.dropdown.active > .dropdown-toggle, 
+.navbar .nav li.dropdown.open.active > .dropdown-toggle {
+    color: #fff;
+    background: #7E043D;
+}
+
+.dropdown-menu li > a:hover,
+.dropdown-menu li > a:focus,
+.dropdown-submenu:hover > a {
+  background: #8c0444;
+
+}
+
+.dropdown-menu .active > a,
+.dropdown-menu .active > a:hover {
+  background: #8c0444;
+}
+nav.secondary {}       
+nav.secondary a, footer a {
+    color: #8c0444;
+    font-size: 1em;
+    line-height: 1.4em;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.3); 
+    text-decoration: none;
+}
+
+article {padding-left: 8px;}
+@media (min-width: 980px) { 
+    body {
+        background: url(../img/magnolia.jpg) no-repeat top right;
+    }
+    h1.title{ font-size: 4em;}
+    h3.subtitle {
+        font-size: 1em;
+        width: 340px;
+        text-align: center;
+    }
+    .welcome {
+        display: block;
+        padding: .45em .5em 0 .3em;
+        font: 400 2.5em/0.8 'Great Vibes', Helvetica, sans-serif;
+        color: #fff;
+        text-align: right;
+        text-shadow: 2px 2px 3px rgba(0,0,0,0.31); 
+    }
+    .main {
+      -moz-border-radius: 4px;
+      -webkit-border-radius: 4px;
+      border-radius: 4px;
+
+      -webkit-box-shadow:  0px 0px 7px 0px rgba(0, 0, 0, 0.15);        
+      -moz-box-shadow:  0px 0px 7px 0px rgba(0, 0, 0, 0.15);
+      box-shadow:  0px 0px 7px 0px rgba(0, 0, 0, 0.15);
+      
+      background: #fff url(../img/noemie-et-greg.jpg) no-repeat 8px 8px;
+    }
+    
+    .navbar {margin-top: 131px;}
+    .navbar-inner{min-height: 35px;}
+    .navbar .nav > li > a {
+      font-size: 1.05em;
+      text-shadow: 1px 1px 1px rgba(0,0,0,0.55); text-decoration: none;
+    }
+    
+    
 }
 
 
+@media (min-width: 1200px) { 
+    h1.title{ font-size: 5em;}
+    h3.subtitle { font-size: 1.1em; width: 433px;}
+    .welcome {
+        padding: .5em 8px 0 0;
+        font: 400 3em/0.8 'Great Vibes', Helvetica, sans-serif;
+    }
+    .main{ background-image: url(../img/noemie-et-greg-1170.jpg);}
+    .navbar {margin-top: 143px;}
+    .navbar .nav > li > a {padding: 10px 24px 10px 20px;}
+    .dropdown .caret {margin-left: 15px;}
+    nav.secondary a { 
+        font-size: 1.1em; line-height: 1.6em;
+        text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+    }
 
-/************************************************************/
+}
 
+
+/* =========================================================================
+   homepage
+   =======================================================================*/
 .ps_container{
     width:940px;
     height:450px;
@@ -99,361 +157,4 @@ p.welcome {
     -webkit-box-shadow:1px 1px 10px #000;
     box-shadow:1px 1px 10px #000;
     box-shadow: 1px 2px 10px rgba(0,0,0,0.4);     
-}
-
-
-/************************************************************/
-
-
-
-
-/* ===== Initializr Styles ==================================================
-   Author: Jonathan Verrecchia - verekia.com/initializr/responsive-template
-   ========================================================================== */
-
-html{background: url(../img/bg.png) repeat;}
-body {
-    /* font: 400 17px/1.6 'Gudea', Verdana, Helvetica, sans-serif;*/
-    font: 400 16px/1.6 'Lora', Georgia, serif;
-    background: url(../img/magnolia.jpg) no-repeat top right;
-}
-
- 
-.wrapper {
-    width: 90%;
-    margin: 0 5%;
-}
-
-
-/* ==============
-    MOBILE: Menu
-   ============== */
-
-
-
-/* ==============
-    MOBILE: Main
-   ============== */
-
-.main {
-    padding: 30px 0;
-}
-
-.main article h1 {
-    font-size: 1.5em; font-weight: bold; color: #8c0444;
-}
-
-.main aside {
-        padding: 0;
-}
-
-.footer-container footer {
-    color: white;
-    padding: 20px 0;
-}
-
-/* ===============
-    ALL: IE Fixes
-   =============== */
-
-.ie7 .title {
-    padding-top: 20px;
-}
-
-/* ==========================================================================
-   Author's custom styles
-   ========================================================================== */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* ==========================================================================
-   Media Queries
-   ========================================================================== */
-
-@media only screen and (min-width: 480px) {
-
-/* ====================
-    INTERMEDIATE: Menu
-   ==================== */
-
-
-}
-
-@media only screen and (min-width: 768px) {
-
-/* ====================
-    WIDE: CSS3 Effects
-   ==================== */
-        
-    .main {
-    -moz-border-radius: 4px;
-    -webkit-border-radius: 4px;
-    -khtml-border-radius: 4px;
-    border-radius: 4px;
-    -webkit-box-shadow:  0px 0px 7px 0px rgba(0, 0, 0, 0.15);        
-    box-shadow:  0px 0px 7px 0px rgba(0, 0, 0, 0.15);
-    background: #fff url(../img/noemie-et-greg.jpg) no-repeat 8px 8px;
-    }
-    
-    .header-container{height: 164px;}
-
-/* ============
-    WIDE: Menu
-   ============ */
-
-    
-   #main-navigation {
-         margin-top: 229px;
-         width: 942px; height: 48px;
-         left: -9px;
-         position: relative; 
-         background-color: #8c0444;
-         background: linear-gradient(top, #8c0444 0%, #7E043D 100%);  
-         background: -moz-linear-gradient(top, #8c0444 0%, #7E043D 100%); 
-         background: -webkit-linear-gradient(top, #8c0444 0%,#7E043D 100%);   
-    }
-    #main-navigation ul ul { display:none;}
-    #main-navigation ul li:hover > ul { display: block;}
-    
-    #main-navigation ul {
-        font-size: 1.1em;
-        font-weight: 400;
-    
-        margin: 0 10px 0 0;
-        padding: 0;
-        /*float: right;*/
-        list-style: none;
-        position: relative;
-        display: inline-table;
-    }
-    #main-navigation ul:after {content: ''; clear: both; display:block;}
-    
-    #main-navigation ul li {float: left;}
-    #main-navigation ul li:hover {
-        background: #7E043D;        
-    }
-    #main-navigation ul li a { 
-        display: block; 
-        padding: 10px 40px;
-        color: #fff; text-shadow: 2px 2px 2px rgba(0,0,0,0.75); text-decoration: none;
-    }
-    /*#main-navigation > ul > li > a { background: url(../img/menu_spacer.png) no-repeat 0 5px; }
-    #main-navigation > ul > li:first-child > a { background:none !important; padding-left:0 !important; }*/
-    
-    #main-navigation ul ul {    
-        background: #7E043D;
-        position:absolute; top: 100%;
-    }
-    #main-navigation ul ul li {    
-        float: none;
-        border-top: 1px solid #8c0444;
-        border-bottom: 1px solid #700336;
-        position: relative;
-    }
-    #main-navigation ul ul li a {
-        padding: 10px 40px;
-        color: #fff;
-    }
-    #main-navigation ul ul li a:hover {
-        background: #700336;
-    }
-        
-
-nav.home { font-size: 1.1em;
-            font-weight: 700; 
-            display: table; margin: 0 auto; 
-         }
-nav.home ul { margin: auto; }
-nav.home li { display:inline; margin: 2em;}
-nav.home a{ color: #8c0444; text-shadow: 2px 2px 4px rgba(0,0,0,0.3); text-decoration: none;} 
-     
-     
-nav.secondary {
-    
-
-}
-nav.secondary a {
-    color: #8c0444;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.3); 
-    text-decoration: none;
-}
-
-
-
-
-
-/* ============
-    WIDE: Main
-   ============ */
-
-    .main article {
-        float: left;
-        width: 700px;
-    }
-
-    .main aside {
-        float: right;
-        width: 220px;
-    }
-}
-
-@media only screen and (min-width: 1140px) {
-
-/* ===============
-    Maximal Width
-   =============== */
-    header.wrapper {padding: 0;}
-    .wrapper {
-        width: 924px; /* 1140px - 10% for margins */
-        padding: 8px;
-        margin: 0 auto;
-    }
-    
-
-
-}
-
-/* ==========================================================================
-   Helper classes
-   ========================================================================== */
-
-.ir {
-    background-color: transparent;
-    border: 0;
-    overflow: hidden;
-    *text-indent: -9999px;
-}
-
-.ir:before {
-    content: "";
-    display: block;
-    width: 0;
-    height: 100%;
-}
-
-.hidden {
-    display: none !important;
-    visibility: hidden;
-}
-
-.visuallyhidden {
-    border: 0;
-    clip: rect(0 0 0 0);
-    height: 1px;
-    margin: -1px;
-    overflow: hidden;
-    padding: 0;
-    position: absolute;
-    width: 1px;
-}
-
-.visuallyhidden.focusable:active,
-.visuallyhidden.focusable:focus {
-    clip: auto;
-    height: auto;
-    margin: 0;
-    overflow: visible;
-    position: static;
-    width: auto;
-}
-
-.invisible {
-    visibility: hidden;
-}
-
-.clearfix:before,
-.clearfix:after {
-    content: " ";
-    display: table;
-}
-
-.clearfix:after {
-    clear: both;
-}
-
-.clearfix {
-    *zoom: 1;
-}
-
-/* ==========================================================================
-   Print styles
-   ========================================================================== */
-
-@media print {
-    * {
-        background: transparent !important;
-        color: #000 !important; /* Black prints faster: h5bp.com/s */
-        box-shadow:none !important;
-        text-shadow: none !important;
-    }
-
-    a,
-    a:visited {
-        text-decoration: underline;
-    }
-
-    a[href]:after {
-        content: " (" attr(href) ")";
-    }
-
-    abbr[title]:after {
-        content: " (" attr(title) ")";
-    }
-
-    /*
-     * Don't show links for images, or javascript/internal links
-     */
-
-    .ir a:after,
-    a[href^="javascript:"]:after,
-    a[href^="#"]:after {
-        content: "";
-    }
-
-    pre,
-    blockquote {
-        border: 1px solid #999;
-        page-break-inside: avoid;
-    }
-
-    thead {
-        display: table-header-group; /* h5bp.com/t */
-    }
-
-    tr,
-    img {
-        page-break-inside: avoid;
-    }
-
-    img {
-        max-width: 100% !important;
-    }
-
-    @page {
-        margin: 0.5cm;
-    }
-
-    p,
-    h2,
-    h3 {
-        orphans: 3;
-        widows: 3;
-    }
-
-    h2,
-    h3 {
-        page-break-after: avoid;
-    }
 }

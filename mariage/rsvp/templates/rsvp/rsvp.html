@@ -1,8 +1,9 @@
 {% load i18n %}
 
 {% if form %}
-	<form action="." method="post">
-		<p{% if form.email.errors %} class="error"{% endif %}>
+	<form action="." method="post" class=".form-horizontal">
+      
+<p{% if form.email.errors %} class="error"{% endif %}>
 			<label class="contact_field">{{ contact.name_label }}</label>
 				{{ form.name }}
 			{% if form.name.errors %}

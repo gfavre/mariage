@@ -11,8 +11,10 @@
     <title>{% block title %}{% page_attribute "page_title" %} - {% trans "Mariage de Noémie &amp; Greg, 10 août 2013" %}{% endblock %}</title>
     {% render_block "css" %}
     <meta name="description" content="">
-    <meta name="viewport" content="width=device-width">
-    <link rel="stylesheet" href="{{ STATIC_URL }}css/normalize.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="{{ STATIC_URL }}css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link href="{{ STATIC_URL }}css/bootstrap-responsive.min.css" rel="stylesheet" media="screen">
+    
     <link rel="stylesheet" href="{{ STATIC_URL }}css/main.css">
     
     <link href='http://fonts.googleapis.com/css?family=Great+Vibes' rel='stylesheet' type='text/css'><!-- logo -->
@@ -21,32 +23,28 @@
   </head>
   <body>
   {% cms_toolbar %}
-    <div class="header-container">
-      <header class="wrapper clearfix">
-        <h1 class="title">Noémie &amp; Greg</h1>
+    <div class="container">
+      <header class="row span12">
+        <h1 class="title"><a href="/">Noémie &amp; Greg</a></h1>
         <h3 class="subtitle">{% if not over %}{{ daysto }} jours avant notre mariage, le {% endif %}10 août 2013</h3>
         {% comment %}{% language_chooser "short"%}{% endcomment %}
       </header>
     </div>
+    
     {% block base_content %}{% endblock %}
-   
-   <div class="footer-container">
-     <footer class="wrapper">
-       <h3>footer</h3>
-     </footer>
-   </div>
 
-        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>
-        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.8.1.min.js"><\/script>')</script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>
+    
+    <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.8.1.min.js"><\/script>')</script>
 
-        <script src="{{ STATIC_URL }}js/main.js"></script>
-
-        <script>
-            var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
-            (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
-            g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
-            s.parentNode.insertBefore(g,s)}(document,'script'));
-        </script>
-        {% render_block "js" %}
-    </body>
+    <script src="{{ STATIC_URL }}js/main.js"></script>
+    <script src="{{ STATIC_URL }}js/bootstrap.min.js"></script>
+    <script>
+        var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
+        (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+        g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+        s.parentNode.insertBefore(g,s)}(document,'script'));
+    </script>
+    {% render_block "js" %}
+  </body>
 </html>

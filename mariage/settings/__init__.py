@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 HOSTMAP = {
-    'development': ['GFiMac27.local', 'kismac2.epfl.ch', 'iMac-de-Gregory-Favre.local'],
+    'development': ['GFiMac27.local', 'kismac2.epfl.ch', 'iMac-de-Gregory-Favre.local', 'MacBook-Air-de-Gregory.local'],
     'production':['web224.webfaction.com',],
     }
 

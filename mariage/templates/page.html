@@ -2,20 +2,24 @@
 {% load cms_tags menu_tags i18n %}
 
 {% block base_content %}
-    <div class="main-container">        
-      <div class="main wrapper clearfix">
+  <div class="container main">
+    <div class="row">
+      <div class="span7 offset5">
         <p class="welcome">{% trans "Nous nous réjouissons de tous vous retrouver pour ce jour spécial!" %}</p>
-        <nav id="main-navigation">
-          <ul>
-            {% show_menu 0 1 1 1 %}
-          </ul>
-        </nav>
-
+      </div>
+    </div>
+    <div class="row">
+      <div class="span12">
+        {% show_menu 0 1 1 1 "menu.html" %}
+      </div>
+    </div>  
+    <div id="content" class="row">
+      <div class="span9">
         <article>
           {% placeholder main_content %}
-           {{ get_current_language }}
         </article>
-        
+      </div>
+      <div class="span3">  
         <aside>
           <nav class="secondary">
             <ul>
@@ -23,12 +27,15 @@
             </ul>
           </nav>
           {% placeholder side_content %}
-       </aside>
+        </aside>
+      </div>
+    </div>
+    <footer class="row span12">
+      <ul>
+        <li>&copy; Noémie Feniello &amp; Gregory Favre - 2012</li>
+        <li><a href="{% page_url "contact" %}">Contact</a></li>
+      </ul>
+    </footer>
+  </div>
 
-     </div> <!-- #main -->
-   </div> <!-- #main-container -->
-
-
-
-  
 {% endblock %}
