@@ -80,6 +80,31 @@ footer{margin-top: -2em; height: 2em; clear: both; padding-top: 2.5em; font-size
 footer a {color: #8c0444;}
 article {padding-left: 8px;}
 
+
+
+.btn-primary {
+  background-color: #8c0444;
+  *background-color: #7E043D;
+  background-image: -moz-linear-gradient(top, #8c0444, #7E043D);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#8c0444), to(#7E043D));
+  background-image: -webkit-linear-gradient(top, #8c0444, #7E043D);
+  background-image: -o-linear-gradient(top, #8c0444, #7E043D);
+  background-image: linear-gradient(to bottom, #8c0444, #7E043D);
+  border-color: #8c0444 #7E043D #7E043D;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff8c0444', endColorstr='#ff7e043d', GradientType=0);
+  filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
+}
+
+.btn-primary:hover,
+.btn-primary:active,
+.btn-primary.active,
+.btn-primary.disabled,
+.btn-primary[disabled] {
+  background-color: #7E043D;
+  *background-color: #700336;
+}
+
+
 /* =========================================================================
    Tablet (portait)
    =======================================================================*/
