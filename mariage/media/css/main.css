@@ -77,6 +77,8 @@ nav.secondary a, footer a {
     text-decoration: none;
 }
 
+footer ul
+
 article {padding-left: 8px;}
 @media (min-width: 980px) { 
     body {
