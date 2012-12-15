@@ -14,7 +14,7 @@ h3 {font-size: 1.1em;}
 */
 h1.title {
   margin: 2px 0 0 0;
-  font: 400 2em 'Great Vibes', Helvetica, sans-serif;
+  font: 400 2.5em 'Great Vibes', Helvetica, sans-serif;
   text-shadow: 2px 2px 4px rgba(0,0,0,0.3); 
 }
 h1.title a {color: #46362b;}
