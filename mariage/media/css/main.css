@@ -104,19 +104,43 @@ article {padding-left: 8px;}
   *background-color: #700336;
 }
 
+/* =========================================================================
+   homepage
+   =======================================================================*/
+.ps_container{
+   /* width:940px;*/
+    height:450px;
+    margin: 44px auto 70px auto;
+    position: relative;
+    cursor: pointer;
+}
+.ps_container img{
+    border:10px solid #fff;
+    position:absolute;
+    top:50%;
+    left:50%;
+    -moz-box-shadow:1px 1px 10px #000;
+    -webkit-box-shadow:1px 1px 10px #000;
+    box-shadow:1px 1px 10px #000;
+    box-shadow: 1px 2px 10px rgba(0,0,0,0.4);     
+}
+.home .navbar {margin-top: 1em;}
+
 
 /* =========================================================================
    Tablet (portait)
    =======================================================================*/
 @media (min-width: 768px){
+    
     body {
         background: url(../img/magnolia.jpg) no-repeat top right;
     }
+    .ps_container{ margin-top: 64px;}
     .main {
       -moz-border-radius: 4px;
       -webkit-border-radius: 4px;
       border-radius: 4px;
-
+      margin-top: 1em;
       -webkit-box-shadow:  0px 0px 7px 0px rgba(0, 0, 0, 0.15);        
       -moz-box-shadow:  0px 0px 7px 0px rgba(0, 0, 0, 0.15);
       box-shadow:  0px 0px 7px 0px rgba(0, 0, 0, 0.15);
@@ -125,8 +149,8 @@ article {padding-left: 8px;}
     .navbar {margin-top: -1px;}
     .navbar .nav > li {width: auto; }
     
-    h1.title{ font-size: 3em;}
-    h3.subtitle {font-size: .75em;}
+    h1.title{ font-size: 3.5em;}
+    h3.subtitle {font-size: .9em;}
     
     nav.secondary a,
     nav.secondary > ul > li:before {
@@ -156,7 +180,7 @@ article {padding-left: 8px;}
         text-align: right;
         text-shadow: 2px 2px 3px rgba(0,0,0,0.31); 
     }
-    .main { background: #fff url(../img/noemie-et-greg.jpg) no-repeat 8px 8px; }
+    .main { background: #fff url(../img/noemie-et-greg.jpg) no-repeat 8px 8px; margin-top: 0; }
     
     .navbar {margin-top: 131px;}
     .navbar-inner{min-height: 35px;}
@@ -164,7 +188,7 @@ article {padding-left: 8px;}
       font-size: 1.05em;
       text-shadow: 1px 1px 1px rgba(0,0,0,0.55); text-decoration: none;
     }
-    
+    .ps_container{ margin-top: 40px;}
     
 }
 
@@ -179,8 +203,9 @@ article {padding-left: 8px;}
         padding: .5em .35em 0 0;
         font: 400 3em/0.8 'Great Vibes', Helvetica, sans-serif;
     }
-    .main{ background-image: url(../img/noemie-et-greg-1170.jpg);  min-height: 730px; }
-    
+    .main{ background-image: url(../img/noemie-et-greg-1170.jpg);  min-height: 730px; margin-top: 1em;}
+    .home .navbar {margin-top: 1em;}
+
     .navbar {margin-top: 143px;}
     .navbar .nav > li > a {padding: 10px 24px 10px 20px;}
     .dropdown .caret {margin-left: 15px;}
@@ -192,23 +217,3 @@ article {padding-left: 8px;}
 }
 
 
-/* =========================================================================
-   homepage
-   =======================================================================*/
-.ps_container{
-    width:940px;
-    height:450px;
-    margin: 30px auto 70px auto;
-    position: relative;
-    cursor: pointer;
-}
-.ps_container img{
-    border:10px solid #fff;
-    position:absolute;
-    top:50%;
-    left:50%;
-    -moz-box-shadow:1px 1px 10px #000;
-    -webkit-box-shadow:1px 1px 10px #000;
-    box-shadow:1px 1px 10px #000;
-    box-shadow: 1px 2px 10px rgba(0,0,0,0.4);     
-}
