@@ -1,0 +1,37 @@
+{% load i18n %}
+
+{% if form %}
+    <form action="." method="post">
+      <label {% if form.email.errors %}class="error"{% endif %} for="{{ form.email.name }}">{{ contact.email_label }}</label>
+      <input type="text" class="span6" placeholder="Email" name="{{ form.email.name }}" value="{{ contact.email.value }}" id="id_{{ form.email.name }}" />
+      {% if form.email.errors %}
+      {% for error in form.email.errors %}
+      <span class="error_msg">{{ error }}</span>
+      {% endfor %}
+      {% endif %}
+
+      <label {% if form.subject.errors %}class="error"{% endif %} for="{{ form.subject.name }}">{{ contact.subject_label }}</label>
+      <input type="text" class="span6"  name="{{ form.subject.name }}" value="{{ contact.subject.value }}" id="id_{{ form.subject.name }}" />
+      {% if form.subject.errors %}
+      {% for error in form.subject.errors %}
+      <span class="error_msg">{{ error }}</span>
+      {% endfor %}
+      {% endif %}
+
+
+      <label {% if form.content.errors %} class="error"{% endif %} for="{{ form.content.name }}">{{ contact.content_label }}</label>
+      <textarea rows="6" cols="40" id="id_{{ form.content.name }}" name="{{ form.content.name }}" class="span6"></textarea>
+      {% if form.content.errors %}
+      {% for error in form.content.errors %}
+      <span class="error_msg">{{ error }}</span>
+      {% endfor %}
+      {% endif %}
+      <div class="row ">
+        <button class="btn btn-primary span6" type="submit">{{ contact.submit }}</button>
+      </div>
+      {% csrf_token %}
+    </form>
+
+{% else %}
+  {{ contact.thanks|safe }}
+{% endif %}
