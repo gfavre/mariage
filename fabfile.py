@@ -130,7 +130,7 @@ def install_app():
 def reload_app(arg=None):
     "Pulls app and refreshes requirements"
     with cd(env.project_dir):
-        run('git pull')
+        run('git pull pygreg master')
     
     if arg <> "quick":
         with cd(env.project_dir):

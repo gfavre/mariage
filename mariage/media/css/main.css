@@ -82,7 +82,8 @@ nav.secondary > ul > li:before { content: '>'; margin: 0 .5em 0 0;}
 footer{margin-top: -2em; height: 2em; clear: both; padding-top: 2.5em; font-size: .9em;}
 footer a {color: #8c0444;}
 article {padding-left: 8px;}
-
+article .span2.pull-left, article .span4.pull-left {margin: 0 20px 8px 0;}
+article .span9 {margin: 0 0 8px 0;}
 
 
 .btn-primary {
@@ -106,6 +107,8 @@ article {padding-left: 8px;}
   background-color: #7E043D;
   *background-color: #700336;
 }
+
+
 
 /* =========================================================================
    homepage
