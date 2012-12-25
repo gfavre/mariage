@@ -8,7 +8,6 @@ h3 {font-size: 1.1em;}
 
 
 
-
 /* =========================================================================
    header
 */
@@ -80,7 +79,7 @@ nav.secondary > ul > li:before {
 nav.secondary > ul > li:before { content: '>'; margin: 0 .5em 0 0;}
 
 footer{margin-top: -2em; height: 2em; clear: both; padding-top: 2.5em; font-size: .9em;}
-footer a {color: #8c0444;}
+#content a, footer a {color: #8c0444;}
 article {padding-left: 8px;}
 article .span2.pull-left, article .span4.pull-left {margin: 0 20px 8px 0;}
 article .span9 {margin: 0 0 8px 0;}
@@ -187,7 +186,7 @@ article .span9 {margin: 0 0 8px 0;}
     }
     .welcome {
         display: block;
-        padding: .45em .5em 0 .3em;
+        padding: .45em .5em 0 2em;
         font: 400 2.5em/0.8 'Great Vibes', Helvetica, sans-serif;
         color: #fff;
         text-align: right;
@@ -213,8 +212,8 @@ article .span9 {margin: 0 0 8px 0;}
     h1.title{ font-size: 5em;}
     h3.subtitle { font-size: 1.1em; width: 433px;}
     .welcome {
-        padding: .5em .35em 0 0;
-        font: 400 3em/0.8 'Great Vibes', Helvetica, sans-serif;
+        padding: .5em .35em 0 2em;
+        font: 400 3em/0.9 'Great Vibes', Helvetica, sans-serif;
     }
     .main{ background-image: url(../img/noemie-et-greg-1170.jpg);  min-height: 730px; margin-top: 1em;}
     .home .navbar {margin-top: 1em;}
@@ -230,3 +229,29 @@ article .span9 {margin: 0 0 8px 0;}
 }
 
 
+@media print {
+    a {text-decoration: none;}
+    footer ul {list-style-type: none;}
+    footer li a {display: none;} 
+    .navbar {display: none;}
+    nav.secondary {display: none;}
+    .plugin_googlemap form {display: none;}
+    .main {
+      -moz-border-radius: 0;
+      -webkit-border-radius: 0;
+      border-radius: 0;
+      -webkit-box-shadow:  none;        
+      -moz-box-shadow:  none;
+      box-shadow:  none;
+    }
+    .plugin_link {display:none;}
+
+
+    /* homepage */
+    .ps_container{ margin-top:90px;}
+    
+    /* page */
+    .welcome {display: none;}
+    
+
+}
