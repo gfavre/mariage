@@ -9,6 +9,8 @@ admin.autodiscover()
 urlpatterns = patterns('',
     (r'^admin/', include(admin.site.urls)),
     (r'^photologue/', include('photologue.urls')),
+    (r'^tinymce/', include('tinymce.urls')),
+    (r'^accounts/login/$', 'django.contrib.auth.views.login'),
     url(r'^', include('cms.urls')),
 )
 

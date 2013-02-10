@@ -118,12 +118,6 @@ ROOT_URLCONF = 'mariage.urls'
 # Python dotted path to the WSGI application used by Django's runserver.
 WSGI_APPLICATION = 'mariage.wsgi.application'
 
-TEMPLATE_DIRS = (os.path.join(PROJECT_DIR, 'templates'), )
-
-CMS_TEMPLATES = (
-    ('page.html', 'standard'),
-    ('home.html', 'homepage'),
-)
 
 INSTALLED_APPS = (
     'django.contrib.auth',
@@ -149,10 +143,22 @@ INSTALLED_APPS = (
     'mariage',
     
     'gunicorn',
-    
+    'tinymce'
     
 )
+
+
+TEMPLATE_DIRS = (os.path.join(PROJECT_DIR, 'templates'), )
+
+CMS_TEMPLATES = (
+    ('page.html', 'standard'),
+    ('home.html', 'homepage'),
+)
+
 CMS_REDIRECTS = True
+CMS_PERMISSION = True
+CMS_USE_TINYMCE = False
+
 AKISMET_API_KEY = 'c53e7d254deb'
 DEFAULT_FROM_EMAIL = 'mariage@nonoetgreg.ch'
 
