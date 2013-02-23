@@ -11,6 +11,7 @@ urlpatterns = patterns('',
     (r'^photologue/', include('photologue.urls')),
     (r'^tinymce/', include('tinymce.urls')),
     (r'^accounts/login/$', 'django.contrib.auth.views.login'),
+    (r'^google7f92da28d3dd66e7\.html$', lambda r: HttpResponse("google-site-verification: google7f92da28d3dd66e7.html", mimetype="text/plain")),
     url(r'^', include('cms.urls')),
 )
 
