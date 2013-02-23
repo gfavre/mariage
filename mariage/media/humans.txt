@@ -3,13 +3,14 @@
 
 # TEAM
 
-    <name> -- <role> -- <twitter>
+    Gregory Favre -- developer -- @favregregory gregory<dot>favre<at>gmail<dot>com
 
 # THANKS
 
-    <name>
+    Noémie Feniello for the love and support
 
 # TECHNOLOGY COLOPHON
 
-    HTML5, CSS3
-    jQuery, Modernizr
+    HTML5, CSS3, SCSS, Twitter bootstrap
+    jQuery, TN3
+    Django, django-cms
