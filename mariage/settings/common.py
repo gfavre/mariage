@@ -135,6 +135,7 @@ INSTALLED_APPS = (
     'cms', 'mptt', 'menus', 'south', 'sekizai',
     'cms.plugins.googlemap', 
     'cms.plugins.link', 'cms.plugins.text',
+    'cms.plugins.file',
     #'cmsplugin_photologue', 
     #'djangocms_text_ckeditor',
     'cmsplugin_contact',
