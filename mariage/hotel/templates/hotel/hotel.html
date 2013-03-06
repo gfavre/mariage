@@ -37,5 +37,6 @@
     </form>
 
 {% else %}
-  {{ contact.thanks|safe }}
+  <div class="alert alert-success">{{ contact.thanks|safe }}</div>
+  
 {% endif %}

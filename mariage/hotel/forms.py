@@ -1,4 +1,3 @@
-#!/usr/bin/python
 # -*- coding: utf-8 -*-
 from django import forms
 from cmsplugin_contact.forms import ContactForm
@@ -15,4 +14,9 @@ class HotelForm(forms.Form):
     
     def clean(self):
         self.cleaned_data['email'] = 'mariage@nonoetgreg.ch'
+        try:
+        	room_choice = int(self.cleaned_data['chambre'])
+        except ValueError:
+        	room_choice = 0
+        self.cleaned_data['chambre'] = dict(choices).get(room_choice, u'Mauvaise entrée')
         return self.cleaned_data
