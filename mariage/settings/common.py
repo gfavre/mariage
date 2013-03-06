@@ -142,6 +142,7 @@ INSTALLED_APPS = (
     'mariage.rsvp',
     'mariage.gallery',
     'mariage.slideshow',
+    'mariage.hotel',
     'mariage',
     
     'gunicorn',

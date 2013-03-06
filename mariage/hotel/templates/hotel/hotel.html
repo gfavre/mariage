@@ -1,0 +1,41 @@
+{% load i18n %}
+
+{% if form %}
+    <form action="." method="post">
+      <label {% if form.name.errors %}class="error"{% endif %} for="{{ form.name.name }}">{{ contact.name_label }}</label>
+      {{ form.name }}
+      {% if form.name.errors %}
+      {% for error in form.name.errors %}
+      <span class="error_msg">{{ error }}</span>
+      {% endfor %}
+      {% endif %}
+      
+      <label {% if form.chambre.errors %}class="error"{% endif %} for="{{ form.chambre.name }}">{{ contact.chambre_label }}</label>
+      {% for radio in form.chambre %}
+      <label class="radio">
+        {{ radio.tag}}
+        {{ radio.choice_label }}
+      </label>
+      {% endfor %}
+      {% if form.chambre.errors %}
+      {% for error in form.chambre.errors %}
+      <span class="error_msg">{{ error }}</span>
+      {% endfor %}
+      {% endif %}
+
+      <label {% if form.content.errors %} class="error"{% endif %} for="{{ form.content.name }}">{{ contact.content_label }}</label>
+      {{ form.content }}
+      {% if form.content.errors %}
+      {% for error in form.content.errors %}
+      <span class="error_msg">{{ error }}</span>
+      {% endfor %}
+      {% endif %}
+      <div class="row ">
+        <button class="btn btn-primary span6" type="submit">{{ contact.submit }}</button>
+      </div>
+      {% csrf_token %}
+    </form>
+
+{% else %}
+  {{ contact.thanks|safe }}
+{% endif %}
