@@ -91,7 +91,8 @@ def _create_main_app():
             env.app_port = app_info['port']
             return
         
-    env.webfaction.create_app(env.project, 'custom_app_with_port', False, '')
+    port = env.webfaction.create_app(env.project, 'custom_app_with_port', False, '')
+    
     
 def configure_supervisor():
     print("Configuring supervisor...")

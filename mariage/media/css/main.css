@@ -35,7 +35,11 @@ h3.subtitle{
     background-color: #8c0444;
     background-image: -webkit-linear-gradient(top, #8c0444 0%,#7E043D 100%);
     background-image: -moz-linear-gradient(top, #8c0444 0%,#7E043D 100%);
+    background-image: -ms-linear-gradient(top, #8c0444, #7E043d);
+    background-image: -o-linear-gradient(top, #8c0444, #7E043d);
     background-image: linear-gradient(top, #8c0444 0%,#7E043D 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#8c0444', endColorstr='#7e043d');
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#8c0444', endColorstr='#7e043d')";
 }
 .navbar .nav > li {width: 100%; }
 .navbar .nav > li > a,
