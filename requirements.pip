@@ -18,3 +18,4 @@ fabric>=1.4
 git+git://github.com/encinas/cmsplugin-photologue
 git+git://github.com/maccesch/cmsplugin-contact.git@e88bd0d2536c89c84099250066366f7bb736affc
 akismet==0.2.0
+django-tinymce>=1.5

@@ -27,7 +27,9 @@ STATIC_ROOT = os.path.join(os.path.dirname(PROJECT_DIR), 'files', 'static')
 MEDIA_ROOT = os.path.join(os.path.dirname(PROJECT_DIR), 'files', 'uploaded')
 
 
-#TINYMCE_JS_ROOT = STATIC_ROOT + '/tiny_mce'
+TINYMCE_JS_ROOT = os.path.join(STATIC_ROOT, 'tiny_mce')
+TINYMCE_JS_URL = STATIC_URL + 'tiny_mce/tinymce.js'
+
 
 
 #MIDDLEWARE_CLASSES += ('debug_toolbar.middleware.DebugToolbarMiddleware', )

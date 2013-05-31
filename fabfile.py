@@ -50,6 +50,7 @@ env.project_dir       = os.path.join(env.home, 'webapps', PROJECT_NAME)
 env.settings_dir      = os.path.join(env.project_dir, SETTINGS_SUBDIR)
 env.supervisor_dir    = os.path.join(env.home, 'webapps', 'supervisor')
 env.virtualenv_dir    = VIRTUALENVS
+env.virtualenv        = VIRTUALENVS + '/' + env.project
 env.supervisor_ve_dir = os.path.join(env.virtualenv_dir, '/supervisor')
 env.webfaction = WebFactionXmlRPC(USER, PASSWORD)
 
@@ -60,6 +61,7 @@ def bootstrap():
     run('mkdir -p %s/lib/python2.7' % env.home)
     run('easy_install-2.7 pip')
     run('pip-2.7 install virtualenv virtualenvwrapper')
+
 
 
 def _create_db():
@@ -86,23 +88,23 @@ def _create_main_app():
     app_name = env.project
     for app_info in env.webfaction.list_apps():
         if app_info['name'] == app_name:
-            env.port = app_info['port']
+            env.app_port = app_info['port']
             return
         
-    env.webfaction.create_app(env.project, 'custom_app_with_port', False, '')
+    port = env.webfaction.create_app(env.project, 'custom_app_with_port', False, '')
     
-def _configure_supervisor():
+    
+def configure_supervisor():
     print("Configuring supervisor...")
+    if not 'app_port' in env:
+    	for app_config in env.webfaction.list_apps():
+    		if app_config.get('name') == env.project:
+    			env.app_port = app_config.get('port')
+    			break
+    require('app_port')
     upload_template('config_templates/gunicorn.conf',
-                    '%s/conf.d/%s.conf' % (env.supervisor_dir, env.project),
-                    {
-                        'project': env.project,
-                        'project_dir': env.settings_dir,
-                        'virtualenv':'%s/%s' % (env.virtualenv_dir, env.project),
-                        'port': env.port,
-                        'user': env.user,
-                     }
-                    )
+                    '%s/conf.d/%s.conf' % (env.supervisor_dir, env.project), env)
+
     reload_supervisor()
  
 def configure_webfaction():
@@ -120,7 +122,7 @@ def install_app():
     
     print("Creating virtualenv...")
     _create_ve(env.project)
-    _configure_supervisor()
+    configure_supervisor()
             
     reload_app()
     restart_app()

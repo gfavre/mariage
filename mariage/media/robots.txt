@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 Disallow: /admin/
-Sitemap: http://www.cosadoca.ch/sitemap.xml
+Sitemap: http://www.nonoetgreg.ch/sitemap.xml

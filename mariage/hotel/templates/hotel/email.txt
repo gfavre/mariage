@@ -1,0 +1,7 @@
+A besoin d'une chambre: {{ data.chambre }}
+Nom(s):
+{{ data.name }}
+
+
+Commentaires:
+{{ data.content }}

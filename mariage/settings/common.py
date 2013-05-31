@@ -28,6 +28,7 @@ DATABASES = {
 # although not all choices may be available on all operating systems.
 # In a Windows environment this must be set to your system time zone.
 TIME_ZONE = 'Europe/Zurich'
+USE_TZ = True
 
 # Language code for this installation. All choices can be found here:
 # http://www.i18nguy.com/unicode/language-identifiers.html
@@ -118,12 +119,6 @@ ROOT_URLCONF = 'mariage.urls'
 # Python dotted path to the WSGI application used by Django's runserver.
 WSGI_APPLICATION = 'mariage.wsgi.application'
 
-TEMPLATE_DIRS = (os.path.join(PROJECT_DIR, 'templates'), )
-
-CMS_TEMPLATES = (
-    ('page.html', 'standard'),
-    ('home.html', 'homepage'),
-)
 
 INSTALLED_APPS = (
     'django.contrib.auth',
@@ -140,19 +135,33 @@ INSTALLED_APPS = (
     'cms', 'mptt', 'menus', 'south', 'sekizai',
     'cms.plugins.googlemap', 
     'cms.plugins.link', 'cms.plugins.text',
+    'cms.plugins.file',
     #'cmsplugin_photologue', 
     #'djangocms_text_ckeditor',
     'cmsplugin_contact',
     'mariage.rsvp',
     'mariage.gallery',
     'mariage.slideshow',
+    'mariage.hotel',
     'mariage',
     
     'gunicorn',
-    
+    'tinymce'
     
 )
+
+
+TEMPLATE_DIRS = (os.path.join(PROJECT_DIR, 'templates'), )
+
+CMS_TEMPLATES = (
+    ('page.html', 'standard'),
+    ('home.html', 'homepage'),
+)
+
 CMS_REDIRECTS = True
+CMS_PERMISSION = True
+CMS_USE_TINYMCE = False
+
 AKISMET_API_KEY = 'c53e7d254deb'
 DEFAULT_FROM_EMAIL = 'mariage@nonoetgreg.ch'
 
