@@ -10,7 +10,7 @@ html5lib==0.95
 wsgiref==0.1.2
 yolk==0.4.3
 PIL==1.1.7
-django-photologue==2.4
+django-photologue==2.7
 django-extensions==0.9
 django-admin-tools==0.4.1
 django-grappelli==2.4.0
