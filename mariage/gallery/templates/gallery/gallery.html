@@ -8,8 +8,13 @@
 {% addtoblock "js" %}
 <script src="{{ STATIC_URL }}js/vendor/jquery.blueimp-gallery.min.js"></script>
 <script src="{{ STATIC_URL }}js/vendor/bootstrap-image-gallery.min.js"></script>
+<script>
+$('#blueimp-gallery').on('slide', function (event, index, slide) {
+    var url = $(this).data('gallery').list[index].getAttribute('data-download-url');
+    $(this).find('.download').prop('href', url).prop('download', url);
+});
+</script>
 {% endaddtoblock %}
-<h1>Template!</h1>
 
 <!-- The Bootstrap Image Gallery lightbox, should be a child element of the document body -->
 <div id="blueimp-gallery" class="blueimp-gallery">
@@ -31,11 +36,17 @@
                     <h4 class="modal-title"></h4>
                 </div>
                 <div class="modal-body next"></div>
+                <p class="text-center">
+                      <a target="_blank" class="download">Télécharger en haute résolution</a>
+                </p>
                 <div class="modal-footer">
+                
+                
                     <button type="button" class="btn btn-default pull-left prev">
                         <i class="glyphicon glyphicon-chevron-left"></i>
                         Précédent
                     </button>
+                    
                     <button type="button" class="btn btn-primary next">
                         Suivant
                         <i class="glyphicon glyphicon-chevron-right"></i>
@@ -48,7 +59,7 @@
 
 <div class="gallery">
 {% for photo in gallery.photos.all %}
-    <a href="{{ photo.get_display_url }}" data-gallery>
+    <a href="{{ photo.get_display_url }}" data-gallery data-download-url="{{ photo.get_full_url }}">
         <img src="{{ photo.get_thumbnail_url }}" />
     </a>
 {% endfor %}
