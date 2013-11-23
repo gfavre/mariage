@@ -5,7 +5,7 @@ from common import *
 ADMINS = (('Gregory Favre', 'gregory.favre@gmail.com'),)
 
 
-DEBUG = False
+DEBUG = True
 TEMPLATE_DEBUG = DEBUG
 
 DATABASES = {
@@ -22,7 +22,7 @@ DATABASES = {
 CACHES = {
     'default': {
         'BACKEND': 'django.core.cache.backends.db.DatabaseCache',
-        'LOCATION': 'cache',
+        'LOCATION': 'django_cache',
     }
 }
 
