@@ -136,6 +136,9 @@ INSTALLED_APPS = (
     'cms.plugins.googlemap', 
     'cms.plugins.link', 'cms.plugins.text',
     'cms.plugins.file',
+    'cms.plugin.video',
+    
+    
     #'cmsplugin_photologue', 
     #'djangocms_text_ckeditor',
     'cmsplugin_contact',

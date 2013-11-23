@@ -136,8 +136,8 @@ def reload_app(arg=None):
     
     if arg <> "quick":
         with cd(env.project_dir):
-            _ve_run(env.project, "pip install -r requirements.pip")
-            _ve_run(env.project, "pip install -e ./")
+            #_ve_run(env.project, "pip install -r requirements.pip")
+            #_ve_run(env.project, "pip install -e ./")
             djangoadmin('syncdb')
             djangoadmin('migrate')
             djangoadmin('collectstatic --noinput')
