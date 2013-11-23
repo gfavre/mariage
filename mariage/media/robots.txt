@@ -1,4 +1,6 @@
 User-agent: *
 Allow: /
 Disallow: /admin/
+Disallow: /photos/
+
 Sitemap: http://www.nonoetgreg.ch/sitemap.xml
