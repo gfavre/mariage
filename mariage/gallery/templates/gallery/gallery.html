@@ -59,7 +59,7 @@ $('#blueimp-gallery').on('slide', function (event, index, slide) {
 
 <div class="gallery">
 {% for photo in gallery.photos.all %}
-    <a href="{{ photo.get_display_url }}" data-gallery data-download-url="{{ photo.get_full_url }}">
+    <a href="{{ photo.get_display_url }}" data-gallery data-download-url="{{ photo.image.url }}">
         <img src="{{ photo.get_thumbnail_url }}" />
     </a>
 {% endfor %}

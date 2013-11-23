@@ -1,0 +1,26 @@
+from django.core.files import File
+from photologue.models import GalleryUpload, Gallery
+
+gu = GalleryUpload()
+f = open('/home/grfavre/mariage_civil.zip')
+gu.zip_file=File(f)
+gu.title=u'mariage-civil'
+gallery = gu.save()
+
+
+from photologue.models import GalleryUpload, Gallery
+import Image
+import zipfile
+from cStringIO import StringIO
+
+self = gu
+
+zip = zipfile.ZipFile(self.zip_file.path)
+
+for filename in sorted(zip.namelist()):
+    if filename.startswith('__'):  # do not process meta files
+        continue
+    data = zip.read(filename)
+    if len(data):
+        trial_image = Image.open(StringIO(data))
+        trial_image.load()
