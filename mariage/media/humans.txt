@@ -1,0 +1,25 @@
+Beyond the Wall Sàrl website
+                            
+/* TEAM */
+
+	Development: Gregory Favre <info@beyondthewall.ch>                            
+	Site: http://www.beyondthewall.ch
+	Twitter: @FavreGregory      
+	Location: Gland, Switzerland
+
+	Texts, design: Noémie and Gregory Favre 
+							
+/* THANKS */
+
+	Noémie Favre, my beloved...
+
+                            
+/* SITE */
+
+	Last update: 2013/08/10 
+	Standards: HTML5, CSS3
+	Components: Django CMS 2.3, jQuery, Twitter Bootstrap, SaSS
+
+	Backend: Nginx (static files), Gunicorn (dynamic) serving Django 1.4 project.
+	IDE: Coda
+	Source: https://github.com/gfavre/mariage.git
